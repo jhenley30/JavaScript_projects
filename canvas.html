@@ -1,0 +1,69 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+  </head>
+
+  <body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d")
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(50, 0, 20, 20);
+      ctx.beginPath();
+      ctx.moveTo(60, 20);
+      ctx.lineTo(60, 60);
+      ctx.moveTo(60, 60);
+      ctx.lineTo(40, 90)
+      ctx.moveTo(60, 60)
+      ctx.lineTo(80, 90)
+      ctx.moveTo(60, 40)
+      ctx.lineTo(40, 30)
+      ctx.moveTo(60, 40)
+      ctx.lineTo(80, 30)
+      ctx.stroke();
+
+
+
+
+/*      ctx.strokeStyle = "Turquoise";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(10, 10);
+      ctx.lineTo(60, 60);
+      ctx.moveTo(60, 10);
+      ctx.lineTo(10, 60);
+      ctx.stroke();
+      */
+/*
+      ctx.fillStyle = "aquamarine";
+      ctx.fillRect(0, 0, 50, 100);
+
+      ctx.fillStyle = "chartreuse";
+      ctx.fillRect(50, 0, 50, 100);
+
+      ctx.fillStyle = "DeepPink";
+      ctx.fillRect(100, 0, 50, 100);
+*/
+/*
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(100, 0, 50, 50);// head
+        ctx.fillRect(115, 50, 20, 20);// neck
+        ctx.fillRect(100, 70, 50, 50);// body
+        ctx.fillRect(80, 70, 20, 20);// left arm
+        ctx.fillRect(150, 70, 20, 20);// right arm
+        ctx.fillRect(100, 120, 20, 20);// left leg
+        ctx.fillRect(130, 120, 20, 20);// right leg
+        ctx.fillRect(80, 120, 20, 20);// left foot
+        ctx.fillRect(150, 120, 20, 20);
+
+  */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first proper HTML page</title>
+</head>
+
+<body>
+  <h1>Hello, world!</h1>
+  <p>A practice web page.</p>
+  <script>
+
+
+let john = {
+  fullName: 'John Smith',
+  bills: [124, 48, 268, 180],
+  calcTips: function() {
+    this.total = [];
+    this.tips = [];
+
+    for (i = 0; i < this.bills.length; i++) {
+      let percentage;
+      let bill = this.bills[i];
+
+      if (bill < 50) {
+        percentage = .2;
+      } else if (bill >= 50 && bill < 100) {
+        percentage = .15;
+      } else {
+        percentage = .1;
+      }
+      //store tip amount in one array and store tip plus bill in another isInArray
+      this.tips[i] = bill * percentage;
+      this.total[i] = bill * percentage + bill;
+    }
+  }
+}
+
+let mark = {
+  fullName: 'Mark Meades',
+  bills: [77 , 375, 110, 45],
+  calcTips: function() {
+    this.total = [];
+    this.tips = [];
+
+    for (i = 0; i < this.bills.length; i++) {
+      let percentage;
+      let bill = this.bills[i];
+
+      if (bill < 100) {
+        percentage = .2;
+      } else if (bill >= 100 && bill < 300) {
+        percentage = .1;
+      } else {
+        percentage = .25;
+      }
+      //store tip amount in one array and store tip plus bill in another isInArray
+      this.tips[i] = bill * percentage;
+      this.total[i] = bill * percentage + bill;
+    }
+  }
+}
+
+//calculate the average of an array to get the average of the calcTips
+//calculate the average tips of both families and console which family paid
+function averageTips(tips) {
+  let sum = 0;
+  for (i = 0; i < tips.length; i++) {
+    sum  = sum + tips[i];
+  }
+  return sum / tips.length;
+}
+
+john.calcTips();
+mark.calcTips();
+
+john.average = averageTips(john.tips);
+mark.average = averageTips(mark.tips);
+console.log(john, mark);
+
+//removesFirstItem
+
+
+
+
+
+/*
+let john = ['John', 'smith', 1990, 'designer', false, 'blue'];
+  for (i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string' && typeof john[i] !== 'number') break;
+  console.log(john[i]);
+}
+
+for (i = john.length -1; i >= 0; i--) {
+  console.log(john[i]);
+}
+*/
+
+
+
+
+
+
+
+/*
+let john = {
+  fullName: 'John Doe',
+  mass: 95,
+  height: 1.95,
+  calcBmi: function() {
+   this.bmi = this.mass / (this.height * this.height);
+   return this.bmi;
+  }
+};
+
+let mark = {
+  fullName: 'Mark Smith',
+  mass: 92,
+  height: 1.95,
+  calcBmi: function() {
+     this.bmi = this.mass / (this.height * this.height);
+     return this.bmi;
+  }
+};
+
+
+
+function compareBmi() {
+  if (john.calcBmi() > mark.calcBmi()) {
+    console.log("John has a greater BMI than Mark.")
+  } else if (mark.calcBmi() > john.calcBmi()) {
+    console.log("Mark has a greater BMI than John")
+  } else {
+    console.log("Mark and John have the same BMI.")
+  }
+};
+
+compareBmi();
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+  let things = [1,2,3,4,5,6,7]
+  let items = ["cat", "dog", "fish", "bird", "insect"];
+// 1.Returns number of items in an array.
+ function returnNumberOfArrayItems(array) {
+    console.log(array.length)
+  };
+    returnNumberOfArrayItems(items);
+
+
+  function stringSeparatedByCommas(array) {
+    console.log(array.join());
+  }
+stringSeparatedByCommas(things);
+
+
+// 3.Removes the last item in an array and returns a new array;
+  function removeLastItem(array) {
+    array.pop();
+    console.log(array);
+    return array;
+  }
+items = removeLastItem(items);
+
+
+// 4.Adds an item to the end of an array and returns a new array.
+  function addsNewItem(array, newItem) {
+    array.push(newItem);
+    console.log(array);
+    return array;
+  }
+  items = addsNewItem(items, "dinosaur");
+
+
+
+// 5.Removes the first item in an array and returns a new array.
+  function removesFirstItem(array) {
+    array.shift();
+    console.log(array);
+    return array;
+  }
+ things = removesFirstItem(things);
+
+
+// 6.Adds a new item to the beginning of an array and returns new array.
+  function addsItemtoBeginning(array, addedItem) {
+    array.unshift(addedItem);
+    console.log(array);
+    return array;
+  }
+addsItemtoBeginning(items, "donkey");
+
+
+// 7.Removes all items except the first and last item in the array ad returns a new array.
+ function removeAllButFirstAndLast(array) {
+    let number = array.length - 2;
+    array.splice(1, number);
+    console.log(array);
+    return array;
+  }
+removeAllButFirstAndLast(items);
+
+
+// 8.Adds any number of strings to the middle of the array and returns a new array.
+ function addsStringsToMiddle(array, newString) {
+    let middle = (Math.round(items.length / 2));
+    array.splice(middle, 0, newString);
+    console.log(array);
+    return array;
+  }
+
+  addsStringsToMiddle(items, "elephant")
+  addsStringsToMiddle(items, "torpedo")
+  addsStringsToMiddle(items, "luxenburg")
+
+// 9.Returns true if an item is in an array.
+ function isInArray(array, x) {
+  array.indexOf(x) === -1 ? console.log("False") : console.log("True");
+  return array;
+};
+isInArray(items, "heart");
+*/
+
+
+
+
+  </script>
+</body>
+</html>
